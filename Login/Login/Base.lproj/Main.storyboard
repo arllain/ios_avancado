@@ -33,11 +33,20 @@
                                     <action selector="signInButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3kc-lc-rdv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XbW-Zb-UpL">
+                                <rect key="frame" x="261" y="532" width="81" height="30"/>
+                                <state key="normal" title="Sign In Xibs"/>
+                                <connections>
+                                    <action selector="signInButtonPressedXibs:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dBY-Yo-VKj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="RJA-VA-vLG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="184" id="68H-d9-r7d"/>
+                            <constraint firstItem="XbW-Zb-UpL" firstAttribute="centerY" secondItem="RJA-VA-vLG" secondAttribute="centerY" id="A7d-Oh-F5D"/>
+                            <constraint firstItem="XbW-Zb-UpL" firstAttribute="leading" secondItem="RJA-VA-vLG" secondAttribute="trailing" constant="30" id="AbP-3L-o9F"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ktn-OS-qco" secondAttribute="trailing" constant="90" id="CfT-L7-Imq"/>
                             <constraint firstItem="RJA-VA-vLG" firstAttribute="top" secondItem="pfh-eQ-io2" secondAttribute="bottom" constant="29" id="HT9-Ni-CgZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pfh-eQ-io2" secondAttribute="trailing" constant="90" id="PzL-P1-54n"/>

@@ -35,6 +35,10 @@ class ViewController: UIViewController {
         presentErrorAlert(with: missingField)
     }
     
+    @IBAction func signInButtonPressedXibs(_ sender: UIButton) {
+        let myViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
+        self.present(myViewController, animated: true, completion: nil)
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Segues.signedIn.rawValue {
             let destinationController = segue.destination as? HomeViewController

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57BCC93026F6321900C56CAC /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57BCC92F26F6321900C56CAC /* HomeViewController.xib */; };
 		57C3338826F5661700FFB94E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C3338726F5661700FFB94E /* AppDelegate.swift */; };
 		57C3338A26F5661700FFB94E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C3338926F5661700FFB94E /* SceneDelegate.swift */; };
 		57C3338C26F5661700FFB94E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C3338B26F5661700FFB94E /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		57BCC92F26F6321900C56CAC /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		57C3338426F5661700FFB94E /* Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Login.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C3338726F5661700FFB94E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57C3338926F5661700FFB94E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				57C3339026F5661700FFB94E /* Login.xcdatamodeld */,
 				57C3339E26F56F8A00FFB94E /* Segues.swift */,
 				57C333A026F571BD00FFB94E /* HomeViewController.swift */,
+				57BCC92F26F6321900C56CAC /* HomeViewController.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 				57C3339726F5661900FFB94E /* LaunchScreen.storyboard in Resources */,
 				57C3339426F5661900FFB94E /* Assets.xcassets in Resources */,
 				57C3338F26F5661700FFB94E /* Main.storyboard in Resources */,
+				57BCC93026F6321900C56CAC /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
