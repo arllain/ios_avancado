@@ -15,7 +15,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if usernameTextField.text?.isEmpty == false || passwordTextField.text?.isEmpty == false {
+            usernameTextField.text = ""
+            passwordTextField.text = ""
+            usernameTextField.becomeFirstResponder()
+            presentAlert(with: "you were logged out")
+        }
+    }
     
     @IBAction func signInButtonPressed(_ sender: UIButton) {
         guard let missingField = validate() else {
@@ -42,7 +51,15 @@ private extension ViewController {
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
     }
+
+    func presentAlert(with message: String) {
+        let alert = UIAlertController(title: "Alert", message: "\(message)", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
     
+
     func validate() -> String? {
         if usernameTextField.text?.isEmpty == true {
             return "Username"
