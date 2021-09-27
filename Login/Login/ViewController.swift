@@ -11,6 +11,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    private var hasSignedIn = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,11 +19,9 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if usernameTextField.text?.isEmpty == false || passwordTextField.text?.isEmpty == false {
-            usernameTextField.text = ""
-            passwordTextField.text = ""
-            usernameTextField.becomeFirstResponder()
-            presentAlert(with: "you were logged out")
+        if hasSignedIn {
+            hasSignedIn = false
+            presentAlert(with: "you are signed  out")
         }
     }
     
@@ -39,10 +38,12 @@ class ViewController: UIViewController {
         let myViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
         self.present(myViewController, animated: true, completion: nil)
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Segues.signedIn.rawValue {
             let destinationController = segue.destination as? HomeViewController
             destinationController?.username = usernameTextField.text
+            hasSignedIn = true
         }
     }
 }
