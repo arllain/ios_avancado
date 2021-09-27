@@ -25,6 +25,10 @@ class HomeViewController: UIViewController {
     }
     
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NotificationCenter.default.post(Notification(name: Notification.Name("signedOut")))
+    }
     /*
     // MARK: - Navigation
 

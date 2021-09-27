@@ -11,20 +11,21 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    private var hasSignedIn = false
+    //private var hasSignedIn = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        registerNotification()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        if hasSignedIn {
-            hasSignedIn = false
-            presentAlert(with: "you are signed  out")
-        }
-    }
-    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        if hasSignedIn {
+//            hasSignedIn = false
+//            presentAlert(with: "you are signed  out")
+//        }
+//    }
+//
     @IBAction func signInButtonPressed(_ sender: UIButton) {
         guard let missingField = validate() else {
             performSegue(withIdentifier: Segues.signedIn.rawValue, sender: self)
@@ -43,7 +44,7 @@ class ViewController: UIViewController {
         if segue.identifier == Segues.signedIn.rawValue {
             let destinationController = segue.destination as? HomeViewController
             destinationController?.username = usernameTextField.text
-            hasSignedIn = true
+            //hasSignedIn = true
         }
     }
 }
@@ -57,7 +58,9 @@ private extension ViewController {
         present(alert, animated: true, completion: nil)
     }
 
-    func presentAlert(with message: String) {
+    func handleSignedOutEvent(with message: String) {
+        usernameTextField.text = ""
+        passwordTextField.text = ""
         let alert = UIAlertController(title: "Alert", message: "\(message)", preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(action)
@@ -75,6 +78,17 @@ private extension ViewController {
         }
         
         return nil
+    }
+    
+    func registerNotification(){
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(signedOutReceived),
+                                               name: NSNotification.Name("signedOut"), object: nil)
+   }
+    
+    @objc
+    func signedOutReceived() {
+        handleSignedOutEvent(with: "you are signed  out")
     }
 }
 
