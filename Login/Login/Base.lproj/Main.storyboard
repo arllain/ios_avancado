@@ -16,30 +16,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ktn-OS-qco">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ktn-OS-qco">
                                 <rect key="frame" x="90" y="404" width="234" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pfh-eQ-io2">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pfh-eQ-io2">
                                 <rect key="frame" x="90" y="469" width="234" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJA-VA-vLG">
-                                <rect key="frame" x="184" y="532" width="47" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJA-VA-vLG">
+                                <rect key="frame" x="277" y="527" width="47" height="30"/>
                                 <state key="normal" title="Sign In"/>
                                 <connections>
                                     <action selector="signInButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3kc-lc-rdv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XbW-Zb-UpL">
-                                <rect key="frame" x="261" y="532" width="81" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sign In Xibs"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XbW-Zb-UpL">
+                                <rect key="frame" x="90" y="527" width="114" height="30"/>
+                                <state key="normal" title="Sign In with Xibs"/>
                                 <connections>
                                     <action selector="signInButtonPressedXibs:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dBY-Yo-VKj"/>
                                 </connections>
@@ -47,6 +43,18 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RJA-VA-vLG" firstAttribute="trailing" secondItem="pfh-eQ-io2" secondAttribute="trailing" id="9mu-Rm-gJ0"/>
+                            <constraint firstItem="RJA-VA-vLG" firstAttribute="baseline" secondItem="XbW-Zb-UpL" secondAttribute="baseline" id="F3c-ki-NLx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RJA-VA-vLG" secondAttribute="trailing" constant="104" id="TXV-jW-xEI"/>
+                            <constraint firstItem="RJA-VA-vLG" firstAttribute="trailing" secondItem="Ktn-OS-qco" secondAttribute="trailing" id="d7c-UK-TnA"/>
+                            <constraint firstItem="RJA-VA-vLG" firstAttribute="leading" secondItem="XbW-Zb-UpL" secondAttribute="trailing" constant="73" id="gB2-et-YMY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RJA-VA-vLG" secondAttribute="bottom" constant="335" id="hEc-O7-eX3"/>
+                            <constraint firstItem="Ktn-OS-qco" firstAttribute="leading" secondItem="pfh-eQ-io2" secondAttribute="leading" id="jJB-ow-Zld"/>
+                            <constraint firstItem="Ktn-OS-qco" firstAttribute="leading" secondItem="XbW-Zb-UpL" secondAttribute="leading" id="oNM-OI-S2b"/>
+                            <constraint firstItem="RJA-VA-vLG" firstAttribute="top" secondItem="pfh-eQ-io2" secondAttribute="bottom" constant="24" id="uG9-h9-DNo"/>
+                            <constraint firstItem="Ktn-OS-qco" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="316" id="v5M-BK-a5z"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sign In" id="oRu-gC-gQm"/>
                     <connections>

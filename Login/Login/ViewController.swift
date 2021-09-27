@@ -18,26 +18,20 @@ class ViewController: UIViewController {
         registerNotification()
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        if hasSignedIn {
-//            hasSignedIn = false
-//            presentAlert(with: "you are signed  out")
-//        }
-//    }
-//
     @IBAction func signInButtonPressed(_ sender: UIButton) {
-        guard let missingField = validate() else {
-            performSegue(withIdentifier: Segues.signedIn.rawValue, sender: self)
-            return
+        validateAndNavigateIfNeeded {
+            self.performSegue(withIdentifier: Segues.signedIn.rawValue, sender: self)
         }
-        
-        presentErrorAlert(with: missingField)
     }
     
     @IBAction func signInButtonPressedXibs(_ sender: UIButton) {
-        let myViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
-        self.present(myViewController, animated: true, completion: nil)
+        validateAndNavigateIfNeeded {
+            let xibViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
+            xibViewController.username = self.usernameTextField.text
+            self.navigationController?.pushViewController(xibViewController, animated: true)
+            // ou como modal
+            //self.present(xibViewController, animated: true, completion: nil)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -90,5 +84,16 @@ private extension ViewController {
     func signedOutReceived() {
         handleSignedOutEvent(with: "you are signed  out")
     }
+    
+    func validateAndNavigateIfNeeded(navigationCallBack: @escaping() -> Void){
+        guard let missingField = validate() else {
+            navigationCallBack()
+            return
+        }
+        
+        presentErrorAlert(with: missingField)
+        
+    }
+        
 }
 

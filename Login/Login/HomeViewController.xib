@@ -19,16 +19,14 @@
             <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="XIB View Controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukC-hS-J9e">
-                    <rect key="frame" x="133" y="310" width="148" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XIB View Controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukC-hS-J9e">
+                    <rect key="frame" x="121" y="308" width="148" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome Arllain" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vV-vW-EAe">
-                    <rect key="frame" x="146" y="380" width="123" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Arllain" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vV-vW-EAe">
+                    <rect key="frame" x="133.66666666666666" y="358" width="122.99999999999997" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -36,6 +34,13 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="2vV-vW-EAe" firstAttribute="top" secondItem="ukC-hS-J9e" secondAttribute="bottom" constant="29" id="6eg-Nn-L8R"/>
+                <constraint firstItem="ukC-hS-J9e" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="121" id="Hjv-P3-fF2"/>
+                <constraint firstItem="ukC-hS-J9e" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="igq-j9-hIe"/>
+                <constraint firstItem="ukC-hS-J9e" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="264" id="pcP-bx-AZ8"/>
+                <constraint firstItem="ukC-hS-J9e" firstAttribute="centerX" secondItem="2vV-vW-EAe" secondAttribute="centerX" id="vQs-gZ-MRC"/>
+            </constraints>
             <point key="canvasLocation" x="132" y="125"/>
         </view>
     </objects>
